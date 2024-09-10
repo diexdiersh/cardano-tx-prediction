@@ -1,0 +1,36 @@
+{
+  "name": "cardano-tx-prediction",
+  "version": "0.0.1",
+  "description": "Collection of script showing how to predict and build transactions in Cardano.",
+  "main": "build/src/index.js",
+  "scripts": {
+    "exec": "node build/src/index.js",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "rm build -rf && tsc -p tsconfig.build.json",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "20.12.7",
+    "@types/ws": "^8.5.12",
+    "gts": "^5.3.1",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "@cardano-ogmios/client": "^6.6.2",
+    "@cardano-ogmios/schema": "^6.6.2",
+    "@emurgo/cardano-serialization-lib-nodejs": "^12.0.1",
+    "bip39": "^3.1.0",
+    "dotenv": "^16.4.5",
+    "joi": "^17.13.3",
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">18.x.x"
+  }
+}

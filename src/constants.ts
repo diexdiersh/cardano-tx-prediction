@@ -1,0 +1,1 @@
+export const ADA_TO_LOVALACE = 1000000
